@@ -17,3 +17,13 @@ Python is  a high-level, interpreted, and general-purpose programming language. 
 - Python Interactive Shell(PEPL)
 - Python script(',py' files)
 - IDE such as VS code
+
+
+## First Python Program
+- print("Hello World!")
+
+- Why "Hello World!"?
+"Hello World!" is traditionally the first program for beginners write when learning a new programming language. It helps you to varify that:
+- Python is install correctly.
+- Your editor is configured properly.
+- You can write and run a  Python program successfully.
