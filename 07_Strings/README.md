@@ -92,6 +92,7 @@ After completing this chapter, you will be able to:
 |------|-------------|
 | `README.md` | Chapter notes |
 | `strings.py` | String examples |
+| `strings_methods.py` | String Built-in Methods |
 | `practice.py` | Practice exercises |
 | `challenge.py` | Challenge |
 | `solution.py` | Solution |
