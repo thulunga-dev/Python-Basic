@@ -2,9 +2,9 @@
 
 ## 📖 What are Functions?
 
-A **function** is a reusable block of code that performs a specific task. Functions help make programs organized, reusable, and easier to maintain.
+A **function** is a reusable block of code that performs a specific task. Functions help reduce code duplication, improve readability, and make programs easier to maintain.
 
-Python provides built-in functions like `print()` and `len()`, and also allows you to create your own functions using the `def` keyword.
+Python provides many built-in functions like `print()` and `len()`, and also allows you to create your own functions using the `def` keyword.
 
 ### Example
 
@@ -28,14 +28,12 @@ Hello, World!
 After completing this chapter, you will be able to:
 
 - Define and call functions
-- Use parameters and arguments
+- Pass arguments to functions
 - Return values from functions
-- Work with default parameters
-- Use keyword arguments
-- Use `*args` and `**kwargs`
-- Understand variable scope
+- Use different types of function arguments
+- Understand local and global scope
 - Create lambda functions
-- Write basic recursive functions
+- Write recursive functions
 
 ---
 
@@ -43,13 +41,12 @@ After completing this chapter, you will be able to:
 
 - Defining Functions
 - Calling Functions
-- Parameters
-- Arguments
+- Parameters and Arguments
 - Return Statement
-- Default Parameters
+- Default Arguments
 - Keyword Arguments
-- Variable-Length Arguments (`*args`)
-- Keyword Variable Arguments (`**kwargs`)
+- `*args`
+- `**kwargs`
 - Variable Scope
 - Lambda Functions
 - Recursion
@@ -58,10 +55,6 @@ After completing this chapter, you will be able to:
 
 ## 🔹 Defining a Function
 
-Functions are defined using the `def` keyword.
-
-### Example
-
 ```python
 def greet():
     print("Hello!")
@@ -69,29 +62,7 @@ def greet():
 
 ---
 
-## 🔹 Calling a Function
-
-Call a function using its name followed by parentheses.
-
-### Example
-
-```python
-greet()
-```
-
-Output
-
-```
-Hello!
-```
-
----
-
-## 🔹 Parameters and Arguments
-
-Parameters receive values passed to a function.
-
-### Example
+## 🔹 Function with Parameters
 
 ```python
 def greet(name):
@@ -100,26 +71,15 @@ def greet(name):
 greet("Alice")
 ```
 
-Output
-
-```
-Hello, Alice
-```
-
 ---
 
 ## 🔹 Return Statement
-
-The `return` statement sends a value back to the caller.
-
-### Example
 
 ```python
 def add(a, b):
     return a + b
 
-result = add(5, 3)
-print(result)
+print(add(5, 3))
 ```
 
 Output
@@ -130,11 +90,7 @@ Output
 
 ---
 
-## 🔹 Default Parameters
-
-A default value is used if no argument is provided.
-
-### Example
+## 🔹 Default Arguments
 
 ```python
 def greet(name="Guest"):
@@ -144,60 +100,35 @@ greet()
 greet("Alice")
 ```
 
-Output
-
-```
-Hello, Guest
-Hello, Alice
-```
-
 ---
 
-## 🔹 Variable-Length Arguments
+## 🔹 *args
 
-### `*args`
-
-Accepts multiple positional arguments.
+Accepts any number of positional arguments.
 
 ```python
 def total(*numbers):
     print(sum(numbers))
+
+total(10, 20, 30)
 ```
 
-### `**kwargs`
+---
 
-Accepts multiple keyword arguments.
+## 🔹 **kwargs
+
+Accepts any number of keyword arguments.
 
 ```python
 def student(**details):
     print(details)
+
+student(name="John", age=22)
 ```
 
 ---
 
-## 🔹 Variable Scope
-
-- **Local Variable:** Exists only inside a function.
-- **Global Variable:** Can be accessed throughout the program.
-
-### Example
-
-```python
-message = "Python"
-
-def show():
-    print(message)
-
-show()
-```
-
----
-
-## 🔹 Lambda Functions
-
-A lambda function is a small anonymous function.
-
-### Example
+## 🔹 Lambda Function
 
 ```python
 square = lambda x: x ** 2
@@ -215,28 +146,17 @@ Output
 
 ## 🔹 Recursion
 
-A recursive function calls itself until a stopping condition is met.
-
-### Example
+A recursive function calls itself until a base case is reached.
 
 ```python
 def countdown(n):
     if n == 0:
         return
+
     print(n)
     countdown(n - 1)
 
 countdown(5)
-```
-
-Output
-
-```
-5
-4
-3
-2
-1
 ```
 
 ---
@@ -244,13 +164,12 @@ Output
 ## 📝 Key Points
 
 - Functions make code reusable.
-- Use `def` to create a function.
 - Functions can accept parameters and return values.
 - `*args` accepts multiple positional arguments.
 - `**kwargs` accepts multiple keyword arguments.
-- Variables can have local or global scope.
-- Lambda functions are useful for short operations.
-- Recursion requires a base case to avoid infinite calls.
+- Lambda functions are anonymous functions.
+- Recursive functions call themselves.
+- Every recursive function must have a base case.
 
 ---
 
@@ -259,9 +178,13 @@ Output
 | File | Description |
 |------|-------------|
 | `README.md` | Chapter notes |
-| `functions.py` | Function examples |
+| `functions.py` | Basic function examples |
+| `function_arguments.py` | Parameters, arguments, `*args`, `**kwargs` |
+| `lambda_functions.py` | Lambda function examples |
+| `recursion.py` | Recursive function examples |
 | `practice.py` | Practice exercises |
 | `challenge.py` | Challenge program |
 | `solution.py` | Challenge solution |
 
 ---
+
